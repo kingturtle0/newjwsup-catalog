@@ -9,11 +9,10 @@
 
 a {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.8);
+  color: black;
 }
 
-:root {
-  color: rgba(0, 0, 0, 0.8);
+html {
   background-color: #f1f1f1;
 }
 
@@ -22,7 +21,7 @@ a {
   min-height: fit-content;
   margin: 0 auto;
   background-color: white;
-  margin-top: 70px;
+  margin-top: 75px;
 }
 
 nav {
@@ -30,7 +29,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   width: 100%;
   max-width: 576px;
