@@ -6,257 +6,65 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="favicon/apple-touch-icon.png"
-    />
+      href="favicon/apple-touch-icon.png" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="favicon/favicon-32x32.png"
-    />
+      href="favicon/favicon-32x32.png" />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="favicon/favicon-16x16.png"
-    />
+      href="favicon/favicon-16x16.png" />
     <link rel="manifest" href="favicon/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link rel="stylesheet" href="/styles/style.scss" />
     <script src="index.js" type="module"></script>
     <title>뉴정원산업 카탈로그</title>
   </head>
   <body>
-    <div id="app">
-      <nav>
-        <div>
+    <div class="catalog">
+      <header class="header">
+        <div class="header__button">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
+            stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6"
-          >
+            class="w-6 h-6">
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
-              d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
-            />
+              d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
           </svg>
-          <span>전체보기</span>
+          <span class="header__button-label">전체보기</span>
         </div>
-        <a href="http://www.jtbl.co.kr" target="_blank">
-          <img id="logo" src="images/logo.png" />
+        <a
+          class="header__logo-wrapper"
+          href="http://www.jtbl.co.kr"
+          target="_blank">
+          <img src="images/logo.png" alt="로고" class="header__logo" />
         </a>
-        <div>
+        <div class="header__button">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            fill="none"
             viewBox="0 0 24 24"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
+            fill="currentColor"
+            class="w-6 h-6">
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
-            />
+              fill-rule="evenodd"
+              d="M15.75 2.25H21a.75.75 0 0 1 .75.75v5.25a.75.75 0 0 1-1.5 0V4.81L8.03 17.03a.75.75 0 0 1-1.06-1.06L19.19 3.75h-3.44a.75.75 0 0 1 0-1.5Zm-10.5 4.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5V10.5a.75.75 0 0 1 1.5 0v8.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V8.25a3 3 0 0 1 3-3h8.25a.75.75 0 0 1 0 1.5H5.25Z"
+              clip-rule="evenodd" />
           </svg>
-          <span>공유하기</span>
+          <span class="header__button-label">공유하기</span>
         </div>
-      </nav>
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <main>
-              <div class="image-row">
-                <a href="http://jtbl.co.kr/b1" target="_blank">
-                  <img src="images/main1.jpg" alt="폐쇄형 담장" />
-                  <h4>폐쇄형 담장</h4>
-                </a>
-                <a href="http://jtbl.co.kr/b3" target="_blank">
-                  <img src="images/main2.jpg" alt="휀스형 담장" />
-                  <h4>휀스형 담장(LED 담장)</h4>
-                </a>
-              </div>
-              <div class="image-row">
-                <a href="http://jtbl.co.kr/75" target="_blank">
-                  <img src="images/main3.jpg" alt="기어블럭" />
-                  <h4>기어블럭(화단, 조경)</h4>
-                </a>
-                <a href="http://jtbl.co.kr/b4" target="_blank">
-                  <img src="images/main4.jpg" alt="한식기와담장" />
-                  <h4>한식기와담장</h4>
-                </a>
-              </div>
-              <div class="links-container">
-                <a href="http://jtbl.co.kr/" target="_blank">
-                  <img src="images/button-newjwsup.png" alt="홈페이지" />
-                  <h5>홈페이지</h5>
-                </a>
-                <a
-                  href="https://www.youtube.com/@user-newjwsup"
-                  target="_blank"
-                >
-                  <img src="images/button-youtube.png" alt="유튜브" />
-                  <h5>유튜브</h5>
-                </a>
-                <a href="https://pf.kakao.com/_xlFxnQxj" target="_blank">
-                  <img src="images/button-kakao.png" alt="카카오톡" />
-                  <h5>카카오톡 바로문의</h5>
-                </a>
-                <a href="https://blog.naver.com/choyh2222" target="_blank">
-                  <img src="images/button-naver.png" alt="네이버" />
-                  <h5>네이버 블로그</h5>
-                </a>
-              </div>
-            </main>
-            <footer>
-              <div>
-                <span>주소 : </span>
-                <a
-                  href="https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%20%ED%99%94%EC%88%9C%EA%B5%B0%20%EC%9D%B4%EC%96%91%EB%A9%B4%20%ED%95%99%ED%8F%AC%EB%A1%9C%20862%20%EB%89%B4%EC%A0%95%EC%9B%90%EC%82%B0%EC%97%85/address/14136476.2288853,4152029.9868815,%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%ED%99%94%EC%88%9C%EA%B5%B0%20%EC%9D%B4%EC%96%91%EB%A9%B4%20%ED%95%99%ED%8F%AC%EB%A1%9C%20862,new?c=17.00,0,0,0,dh&isCorrectAnswer=true"
-                  >전남 화순군 이양면 학포로 862(품평리 629)</a
-                >
-              </div>
-              <div>
-                <span>전화 :</span>
-                <a href="tel:061-373-9566">061-373-9566</a>
-                <span>/</span>
-                <a href="tel:010-9548-1643">010-9548-1643</a>
-              </div>
-            </footer>
-          </div>
-          <div class="swiper-slide">
-            <main>
-              <div class="image-row">
-                <a href="http://jtbl.co.kr/b1" target="_blank">
-                  <img src="images/main1.jpg" alt="폐쇄형 담장" />
-                  <h4>폐쇄형 담장</h4>
-                </a>
-                <a href="http://jtbl.co.kr/b3" target="_blank">
-                  <img src="images/main2.jpg" alt="휀스형 담장" />
-                  <h4>휀스형 담장(LED 담장)</h4>
-                </a>
-              </div>
-              <div class="image-row">
-                <a href="http://jtbl.co.kr/75" target="_blank">
-                  <img src="images/main3.jpg" alt="기어블럭" />
-                  <h4>기어블럭(화단, 조경)</h4>
-                </a>
-                <a href="http://jtbl.co.kr/b4" target="_blank">
-                  <img src="images/main4.jpg" alt="한식기와담장" />
-                  <h4>한식기와담장</h4>
-                </a>
-              </div>
-              <div class="links-container">
-                <a href="http://jtbl.co.kr/" target="_blank">
-                  <img src="images/button-newjwsup.png" alt="홈페이지" />
-                  <h5>홈페이지</h5>
-                </a>
-                <a
-                  href="https://www.youtube.com/@user-newjwsup"
-                  target="_blank"
-                >
-                  <img src="images/button-youtube.png" alt="유튜브" />
-                  <h5>유튜브</h5>
-                </a>
-                <a href="https://pf.kakao.com/_xlFxnQxj" target="_blank">
-                  <img src="images/button-kakao.png" alt="카카오톡" />
-                  <h5>카카오톡 바로문의</h5>
-                </a>
-                <a href="https://blog.naver.com/choyh2222" target="_blank">
-                  <img src="images/button-naver.png" alt="네이버" />
-                  <h5>네이버 블로그</h5>
-                </a>
-              </div>
-            </main>
-            <footer>
-              <div>
-                <span>주소 : </span>
-                <a
-                  href="https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%20%ED%99%94%EC%88%9C%EA%B5%B0%20%EC%9D%B4%EC%96%91%EB%A9%B4%20%ED%95%99%ED%8F%AC%EB%A1%9C%20862%20%EB%89%B4%EC%A0%95%EC%9B%90%EC%82%B0%EC%97%85/address/14136476.2288853,4152029.9868815,%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%ED%99%94%EC%88%9C%EA%B5%B0%20%EC%9D%B4%EC%96%91%EB%A9%B4%20%ED%95%99%ED%8F%AC%EB%A1%9C%20862,new?c=17.00,0,0,0,dh&isCorrectAnswer=true"
-                  >전남 화순군 이양면 학포로 862(품평리 629)</a
-                >
-              </div>
-              <div>
-                <span>전화 :</span>
-                <a href="tel:061-373-9566">061-373-9566</a>
-                <span>/</span>
-                <a href="tel:010-9548-1643">010-9548-1643</a>
-              </div>
-            </footer>
-          </div>
-          <div class="swiper-slide">
-            <main>
-              <div class="image-row">
-                <a href="http://jtbl.co.kr/b1" target="_blank">
-                  <img src="images/main1.jpg" alt="폐쇄형 담장" />
-                  <h4>폐쇄형 담장</h4>
-                </a>
-                <a href="http://jtbl.co.kr/b3" target="_blank">
-                  <img src="images/main2.jpg" alt="휀스형 담장" />
-                  <h4>휀스형 담장(LED 담장)</h4>
-                </a>
-              </div>
-              <div class="image-row">
-                <a href="http://jtbl.co.kr/75" target="_blank">
-                  <img src="images/main3.jpg" alt="기어블럭" />
-                  <h4>기어블럭(화단, 조경)</h4>
-                </a>
-                <a href="http://jtbl.co.kr/b4" target="_blank">
-                  <img src="images/main4.jpg" alt="한식기와담장" />
-                  <h4>한식기와담장</h4>
-                </a>
-              </div>
-              <div class="links-container">
-                <a href="http://jtbl.co.kr/" target="_blank">
-                  <img src="images/button-newjwsup.png" alt="홈페이지" />
-                  <h5>홈페이지</h5>
-                </a>
-                <a
-                  href="https://www.youtube.com/@user-newjwsup"
-                  target="_blank"
-                >
-                  <img src="images/button-youtube.png" alt="유튜브" />
-                  <h5>유튜브</h5>
-                </a>
-                <a href="https://pf.kakao.com/_xlFxnQxj" target="_blank">
-                  <img src="images/button-kakao.png" alt="카카오톡" />
-                  <h5>카카오톡 바로문의</h5>
-                </a>
-                <a href="https://blog.naver.com/choyh2222" target="_blank">
-                  <img src="images/button-naver.png" alt="네이버" />
-                  <h5>네이버 블로그</h5>
-                </a>
-              </div>
-            </main>
-            <footer>
-              <div>
-                <span>주소 : </span>
-                <a
-                  href="https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%20%ED%99%94%EC%88%9C%EA%B5%B0%20%EC%9D%B4%EC%96%91%EB%A9%B4%20%ED%95%99%ED%8F%AC%EB%A1%9C%20862%20%EB%89%B4%EC%A0%95%EC%9B%90%EC%82%B0%EC%97%85/address/14136476.2288853,4152029.9868815,%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%ED%99%94%EC%88%9C%EA%B5%B0%20%EC%9D%B4%EC%96%91%EB%A9%B4%20%ED%95%99%ED%8F%AC%EB%A1%9C%20862,new?c=17.00,0,0,0,dh&isCorrectAnswer=true"
-                  >전남 화순군 이양면 학포로 862(품평리 629)</a
-                >
-              </div>
-              <div>
-                <span>전화 :</span>
-                <a href="tel:061-373-9566">061-373-9566</a>
-                <span>/</span>
-                <a href="tel:010-9548-1643">010-9548-1643</a>
-              </div>
-            </footer>
-          </div>
-        </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
-      </div>
+      </header>
     </div>
   </body>
 </html>
