@@ -89,6 +89,7 @@ body {
     .brick__title {
       font-size: 18px;
       text-align: center;
+      animation: blink 5s ease-in-out;
     }
   }
 }
@@ -114,6 +115,7 @@ body {
     }
     .link__title {
       max-width: 60px;
+      animation: blink 5s ease-in-out;
     }
   }
 }
@@ -139,5 +141,19 @@ body {
       color: rgba(255, 255, 255, 0.9);
       font-weight: 600;
     }
+  }
+}
+
+@keyframes blink {
+  0%,
+  33%,
+  66%,
+  100% {
+    opacity: 1;
+  }
+  16.5%,
+  49.5%,
+  82.5% {
+    opacity: 0;
   }
 }
