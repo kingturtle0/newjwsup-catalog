@@ -1,5 +1,10 @@
 @import './reset.scss';
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 body {
   background-color: #f1f1f1;
   display: flex;
@@ -21,18 +26,118 @@ body {
   align-items: center;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   padding: 0px 15px;
+  background-color: white;
   svg {
-    width: 50px;
+    width: 40px;
   }
   .header__logo {
     width: 125px;
     height: 30px;
   }
-  .header__button {
+  .header__btn {
     display: flex;
     flex-direction: column;
     align-items: center;
+    .header__btn-label {
+      font-size: 12px;
+    }
+  }
+}
+
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+  max-width: 576px;
+  width: 100%;
+}
+
+.home {
+  margin-top: 20px;
+  padding: 0px 15px;
+}
+
+.bricks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  .brick {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    .brick__img-wrapper {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-top: 100%;
+      overflow: hidden;
+      .brick__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        box-sizing: border-box;
+      }
+    }
+    .brick__title {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+}
+
+.links {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  .link {
+    max-width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    .link__logo {
+      width: 100%;
+      height: 100%;
+      border: 2px solid rgba(0, 0, 0, 0.4);
+      border-radius: 50%;
+      box-sizing: border-box;
+    }
+    .link__title {
+      max-width: 60px;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 0px;
+  width: 100%;
+  background-color: rgb(47, 85, 151);
+  color: rgba(255, 255, 255, 0.9);
+  div {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 3.5vw;
+    svg {
+      width: 18px;
+    }
+    a {
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 600;
+    }
   }
 }
