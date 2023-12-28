@@ -43,8 +43,8 @@
   </head>
   <body>
     <div class="catalog">
-      <header class="header">
-        <div class="header__btn">
+      <header class="catalog-header">
+        <div class="catalog-header__btn">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -58,16 +58,16 @@
               d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
             />
           </svg>
-          <span class="header__btn-label">전체보기</span>
+          <span class="catalog-header__btn-label">전체보기</span>
         </div>
         <a
-          class="header__logo-wrapper"
+          class="catalog-header__logo-wrapper"
           href="http://www.jtbl.co.kr"
           target="_blank"
         >
-          <img src="images/logo.png" class="header__logo" />
+          <img src="images/logo.png" class="catalog-header__logo" />
         </a>
-        <div class="header__btn">
+        <div class="catalog-header__btn">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -84,10 +84,13 @@
 
           <span class="header__btn-label">공유하기</span>
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </header>
       <div class="swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
+          <!-- <div class="swiper-slide">
             <main class="home">
               <section class="bricks">
                 <div class="brick">
@@ -190,13 +193,133 @@
                 >
               </div>
             </footer>
+          </div> -->
+          <div class="swiper-slide">
+            <main class="pg-closed standard">
+              <header class="header">
+                <div class="header__img">풍경벽돌 폐쇄형</div>
+                <nav>
+                  <ul class="header__nav">
+                    <li class="header__tab">
+                      <span class="tab__title">풍경벽돌 폐쇄형</span>
+                      <span class="tab__subtitle">규격</span>
+                    </li>
+                    <li class="header__tab">
+                      <span class="tab__title">풍경벽돌 폐쇄형</span>
+                      <span class="tab__subtitle">시공사례</span>
+                    </li>
+                    <li class="header__tab">
+                      <span class="tab__title">체스블럭 폐쇄형</span>
+                      <span class="tab__subtitle">규격</span>
+                    </li>
+                    <li class="header__tab">
+                      <span class="tab__title">체스블럭 폐쇄형</span>
+                      <span class="tab__subtitle">시공사례</span>
+                    </li>
+                  </ul>
+                </nav>
+              </header>
+              <section class="products">
+                <div class="product">
+                  <div class="product__type">
+                    풍경벽돌(양면 / 신형양면 / 단면)
+                  </div>
+                  <div class="product__img-container">
+                    <div class="product__img-wrapper">
+                      <img src="" class="product__img" />
+                      <span class="product__name">회색</span>
+                    </div>
+                    <div class="product__img-wrapper">
+                      <img src="" class="product__img" />
+                      <span class="product__name">밤색</span>
+                    </div>
+                    <div class="product__img-wrapper">
+                      <img src="" class="product__img" />
+                      <span class="product__name">황토색</span>
+                    </div>
+                  </div>
+                  <div class="product__info">
+                    <ul>
+                      <li class="info__title">규격(WxHxT)</li>
+                      <li class="info__title">중량(kg/EA)</li>
+                      <li class="info__title">1m/수량(EA)</li>
+                      <li class="info__title">1pallet단위수량</li>
+                    </ul>
+                    <ul>
+                      <li class="info__value">390*190*150</li>
+                      <li class="info__value">14</li>
+                      <li class="info__value">12.5</li>
+                      <li class="info__value">126/105</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="product">
+                  <div class="product__type">회문양</div>
+                  <div class="product__img-container">
+                    <div class="product__img-wrapper">
+                      <img src="" class="product__img" />
+                      <span class="product__name">회색</span>
+                    </div>
+                    <div class="product__img-wrapper">
+                      <img src="" class="product__img" />
+                      <span class="product__name">밤색</span>
+                    </div>
+                    <div class="product__img-wrapper">
+                      <img src="" class="product__img" />
+                      <span class="product__name">황토색</span>
+                    </div>
+                  </div>
+                  <div class="product__info">
+                    <ul>
+                      <li class="info__title">규격(WxHxT)</li>
+                      <li class="info__title">중량(kg/EA)</li>
+                      <li class="info__title">1m/수량(EA)</li>
+                      <li class="info__title">1pallet단위수량</li>
+                    </ul>
+                    <ul>
+                      <li class="info__value">400*150*150</li>
+                      <li class="info__value">11</li>
+                      <li class="info__value">17</li>
+                      <li class="info__value">151/139</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="product">
+                  <div class="product__type">두겁석</div>
+                  <div class="product__img-container">
+                    <div class="product__img-wrapper">
+                      <img src="" class="product__img" />
+                      <span class="product__name">회색</span>
+                    </div>
+                    <div class="product__img-wrapper">
+                      <img src="" class="product__img" />
+                      <span class="product__name">밤색</span>
+                    </div>
+                    <div class="product__img-wrapper">
+                      <img src="" class="product__img" />
+                      <span class="product__name">황토색</span>
+                    </div>
+                  </div>
+                  <div class="product__info">
+                    <ul>
+                      <li class="info__title">규격(WxHxT)</li>
+                      <li class="info__title">중량(kg/EA)</li>
+                      <li class="info__title">1m/수량(EA)</li>
+                      <li class="info__title">1pallet단위수량</li>
+                    </ul>
+                    <ul>
+                      <li class="info__value">165*65*232</li>
+                      <li class="info__value">4</li>
+                      <li class="info__value">6</li>
+                      <li class="info__value">339/341</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            </main>
           </div>
           <div class="swiper-slide"></div>
-          <div class="swiper-slide"></div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
       </div>
     </div>
   </body>
