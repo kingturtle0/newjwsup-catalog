@@ -5,6 +5,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const swiper = new Swiper('.swiper', {
+  autoHeight: true,
   modules: [Pagination, Navigation],
   pagination: {
     el: '.swiper-pagination',
