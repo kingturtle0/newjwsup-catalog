@@ -1,5 +1,5 @@
 @import './reset.scss';
-@import './product-standard.scss';
+@import './product.scss';
 
 a {
   text-decoration: none;
@@ -141,6 +141,7 @@ body {
   background-color: rgb(47, 85, 151);
   color: white;
   font-size: 18px;
+  margin-top: 20px;
   div {
     display: flex;
     align-items: center;
