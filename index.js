@@ -16,3 +16,8 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+swiper.on('slideChange', function () {
+  // window.scrollTo(0, 0);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});

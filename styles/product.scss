@@ -41,6 +41,12 @@
 .pg-closed_example {
   background-image: url('../public/images/pg-closed_example/header.jpg');
 }
+.cb-closed_standard {
+  background-image: url('../public/images/cb-closed_standard/header.jpg');
+}
+.cb-closed_example {
+  background-image: url('../public/images/cb-closed_example/header.jpg');
+}
 
 .standard {
   display: flex;
@@ -121,6 +127,27 @@
         padding-left: 5px;
         font-size: 14px;
       }
+    }
+  }
+}
+
+.swiper-slide:nth-child(4) {
+  .product:first-child {
+    .product__img-container {
+      display: flex;
+      .product__img {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.swiper-slide:nth-child(5) {
+  .example__img-container {
+    display: flex;
+    flex-direction: column;
+    .example__img {
+      height: 250px;
     }
   }
 }
