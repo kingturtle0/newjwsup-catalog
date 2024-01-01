@@ -53,6 +53,12 @@
 .sj-fence_example {
   background-image: url('../public/images/sj-fence_example/header.jpg');
 }
+.cb-fence_standard {
+  background-image: url('../public/images/cb-fence_standard/header.jpg');
+}
+.cb-fence_example {
+  background-image: url('../public/images/cb-fence_example/header.jpg');
+}
 
 .standard {
   display: flex;
@@ -138,7 +144,8 @@
   }
 }
 
-.swiper-slide:nth-child(4) {
+.swiper-slide:nth-child(4),
+.swiper-slide:nth-child(8) {
   .product:first-child {
     .product__img-container {
       display: flex;
