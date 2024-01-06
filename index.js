@@ -15,9 +15,7 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-});
-
-swiper.on('slideChange', function () {
-  // window.scrollTo(0, 0);
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  on: {
+    slideChange: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
+  },
 });

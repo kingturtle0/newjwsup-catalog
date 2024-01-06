@@ -6,7 +6,7 @@ $gearColor: #05aff1;
     height: 280px;
     box-sizing: border-box;
     position: relative;
-    background-image: url('../public/images/gear_standard/header.png');
+    background-image: url('/images/gear_standard/header.png');
     background-size: cover;
     .img__contents {
       position: absolute;
@@ -22,6 +22,7 @@ $gearColor: #05aff1;
       }
       h3 {
         font-size: 30px;
+        animation: blink 5s infinite;
       }
       .gear-color {
         color: $gearColor;
