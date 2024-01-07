@@ -19,3 +19,21 @@ const swiper = new Swiper('.swiper', {
     slideChange: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
   },
 });
+
+const bricks = document.querySelectorAll('.brick');
+bricks.forEach((brick, i) => {
+  brick.addEventListener('click', () => {
+    swiper.slideTo(i * 4 + 1, 0);
+  });
+});
+
+const productTabs = document.querySelectorAll('.product-header__tab');
+productTabs.forEach((tab, i) => {
+  tab.addEventListener('click', () => {
+    if (swiper.activeIndex < 5) {
+      swiper.slideTo((i % 4) + 1, 0);
+    } else {
+      swiper.slideTo((i % 4) + 5, 0);
+    }
+  });
+});
