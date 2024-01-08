@@ -20,6 +20,11 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
+const logo = document.querySelector('.catalog-header__logo');
+logo.addEventListener('click', () => {
+  swiper.slideTo(0);
+});
+
 const bricks = document.querySelectorAll('.brick');
 bricks.forEach((brick, i) => {
   brick.addEventListener('click', () => {
