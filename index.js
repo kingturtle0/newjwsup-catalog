@@ -42,3 +42,19 @@ productTabs.forEach((tab, i) => {
     }
   });
 });
+
+const headerBtns = document.querySelectorAll('.catalog-header__btn');
+const allPageToggleBtn = headerBtns[0];
+const shareToggleBtn = headerBtns[1];
+const allPage = document.querySelector('.slides-pagination');
+allPageToggleBtn.addEventListener('click', () => {
+  allPage.classList.toggle('hidden');
+});
+
+const pages = allPage.querySelectorAll('.page');
+pages.forEach((page, i) => {
+  page.addEventListener('click', () => {
+    allPage.classList.toggle('hidden');
+    swiper.slideTo(i, 0);
+  });
+});
