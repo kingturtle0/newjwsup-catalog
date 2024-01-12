@@ -1,0 +1,42 @@
+.slides-pagination {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  background: white;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+  .pages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 15px;
+    overflow-y: scroll;
+    padding: 15px;
+    .page {
+      cursor: pointer;
+      height: 200px;
+      border-radius: 10px;
+      box-sizing: border-box;
+      position: relative;
+      .page__index {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.2);
+        color: white;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.page:first-child {
+  background-image: url('/images/pages/page1.png');
+  background-size: cover;
+}

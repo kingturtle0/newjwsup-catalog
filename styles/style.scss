@@ -1,6 +1,7 @@
 @import './reset.scss';
 @import './product.scss';
 @import './gear.scss';
+@import './pages.scss';
 
 a {
   text-decoration: none;
@@ -23,6 +24,7 @@ body {
   background-color: white;
   display: grid;
   grid-template-rows: 75px 1fr;
+  position: relative;
 }
 
 .catalog-header {
@@ -69,29 +71,6 @@ body {
 .swiper-slide {
   max-width: 576px;
   width: 100%;
-}
-
-.swiper-wrapper {
-  position: relative;
-}
-
-.slides-pagination {
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  padding: 10px;
-  background: white;
-  width: 100%;
-  box-sizing: border-box;
-  .pages {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 10px;
-    .page {
-      cursor: pointer;
-    }
-  }
 }
 
 .home {
