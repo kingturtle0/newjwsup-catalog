@@ -10,7 +10,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     gap: 15px;
-    overflow-y: scroll;
     padding: 15px;
     .page {
       cursor: pointer;
@@ -24,8 +23,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba($color: #000000, $alpha: 0.2);
-        color: white;
+        border: 0.1px solid rgba($color: #000000, $alpha: 0.8);
         border-radius: 10px;
         display: flex;
         justify-content: center;
@@ -36,7 +34,42 @@
   }
 }
 
-.page:first-child {
-  background-image: url('/images/pages/page1.png');
+.page {
   background-size: cover;
+  &:first-child {
+    background-image: url('/images/pages/1.png');
+  }
+  &:nth-child(2) {
+    background-image: url('/images/pages/2.png');
+  }
+  &:nth-child(3) {
+    background-image: url('/images/pages/3.png');
+  }
+  &:nth-child(4) {
+    background-image: url('/images/pages/4.png');
+  }
+  &:nth-child(5) {
+    background-image: url('/images/pages/5.png');
+  }
+  &:nth-child(6) {
+    background-image: url('/images/pages/6.png');
+  }
+  &:nth-child(7) {
+    background-image: url('/images/pages/7.png');
+  }
+  &:nth-child(8) {
+    background-image: url('/images/pages/8.png');
+  }
+  &:nth-child(9) {
+    background-image: url('/images/pages/9.png');
+  }
+  &:nth-child(10) {
+    background-image: url('/images/pages/10.png');
+  }
+  &:nth-child(11) {
+    background-image: url('/images/pages/11.png');
+  }
+  &:nth-child(12) {
+    background-image: url('/images/pages/12.png');
+  }
 }
