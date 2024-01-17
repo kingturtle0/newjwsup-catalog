@@ -1,13 +1,23 @@
 $gearColor: #05aff1;
 
 .gear-header {
-  .gear-header__img {
+  .gear-header__img-wrapper {
     width: 100%;
     height: 280px;
     box-sizing: border-box;
     position: relative;
-    background-image: url('/images/gear_standard/header.png');
-    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .img {
+      height: 100%;
+      background-size: cover;
+      &:first-child {
+        background-image: url('/images/gear_standard/header1.png');
+      }
+      &:nth-child(2) {
+        background-image: url('/images/gear_standard/header1.png');
+      }
+    }
     .img__contents {
       position: absolute;
       display: flex;
@@ -126,7 +136,7 @@ $gearColor: #05aff1;
     .product__info {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, 40px);
+      grid-template-rows: repeat(2, 30px);
       gap: 1px;
       border-top: 1px solid rgba($color: #000000, $alpha: 0.6);
       border-bottom: 1px solid rgba($color: #000000, $alpha: 0.6);
@@ -151,23 +161,23 @@ $gearColor: #05aff1;
     }
     &:first-child {
       .product__img {
-        width: 50%;
+        width: 40%;
       }
     }
     &:nth-child(2) {
       .product__img {
-        width: 65%;
+        width: 50%;
       }
     }
     &:last-child {
       .product__img {
-        width: 25%;
+        width: 20%;
       }
     }
     &:not(:last-child) {
       .product__info {
-        grid-template-columns: repeat(2, 0.5fr) repeat(3, 1fr);
-        grid-template-rows: repeat(3, 40px);
+        grid-template-columns: 0.2fr 0.7fr repeat(3, 1fr);
+        grid-template-rows: repeat(3, 30px);
         span {
           &:first-child {
             grid-column: span 2;
