@@ -16,7 +16,10 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
   on: {
-    slideChange: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
+    slideChange: () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      console.log(swiper.activeIndex);
+    },
   },
 });
 
@@ -45,16 +48,25 @@ productTabs.forEach((tab, i) => {
 
 const headerBtns = document.querySelectorAll('.catalog-header__btn');
 const allPageToggleBtn = headerBtns[0];
-const shareToggleBtn = headerBtns[1];
 const allPage = document.querySelector('.slides-pagination');
-allPageToggleBtn.addEventListener('click', () => {
+const allPageToggleBtnSvg = allPageToggleBtn.querySelectorAll('svg');
+
+const toggleAllPage = () => {
+  allPageToggleBtnSvg[0].classList.toggle('hidden');
+  allPageToggleBtnSvg[1].classList.toggle('hidden');
   allPage.classList.toggle('hidden');
+};
+
+allPageToggleBtn.addEventListener('click', () => {
+  toggleAllPage();
 });
 
 const pages = allPage.querySelectorAll('.page');
 pages.forEach((page, i) => {
   page.addEventListener('click', () => {
-    allPage.classList.toggle('hidden');
+    toggleAllPage();
     swiper.slideTo(i, 0);
   });
 });
+
+const shareToggleBtn = headerBtns[1];
