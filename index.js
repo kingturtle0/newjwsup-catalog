@@ -4,6 +4,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+let currentPageIndex = 0;
+
 const swiper = new Swiper('.swiper', {
   autoHeight: true,
   modules: [Pagination, Navigation],
@@ -18,7 +20,7 @@ const swiper = new Swiper('.swiper', {
   on: {
     slideChange: () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      console.log(swiper.activeIndex);
+      changePage();
     },
   },
 });
@@ -62,11 +64,19 @@ allPageToggleBtn.addEventListener('click', () => {
 });
 
 const pages = allPage.querySelectorAll('.page');
+
 pages.forEach((page, i) => {
   page.addEventListener('click', () => {
     toggleAllPage();
     swiper.slideTo(i, 0);
   });
 });
+
+const changePage = () => {
+  const pageNumbers = allPage.querySelectorAll('.page__index');
+  pageNumbers[currentPageIndex].classList.remove('page__index--selected');
+  pageNumbers[swiper.activeIndex].classList.add('page__index--selected');
+  currentPageIndex = swiper.activeIndex;
+};
 
 const shareToggleBtn = headerBtns[1];
