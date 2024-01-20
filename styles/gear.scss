@@ -6,33 +6,26 @@ $gearColor: #05aff1;
     height: 280px;
     box-sizing: border-box;
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: center;
     .img {
+      width: 100%;
       height: 100%;
-      background-size: cover;
-      &:first-child {
-        background-image: url('/images/gear_standard/header1.png');
-      }
-      &:nth-child(2) {
-        background-image: url('/images/gear_standard/header1.png');
-      }
     }
     .img__contents {
       position: absolute;
+      top: 0;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      align-items: center;
-      width: 100%;
       height: 100%;
-      h2 {
-        font-size: 36px;
-        font-weight: 600;
-      }
-      h3 {
-        font-size: 30px;
-        animation: blink 5s infinite;
+      font-weight: 600;
+      .img__content {
+        font-size: 44px;
+        &:not(:first-child, :last-child) {
+          font-size: 36px;
+          animation: blink 5s infinite;
+        }
       }
       .gear-color {
         color: $gearColor;
