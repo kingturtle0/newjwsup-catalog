@@ -21,6 +21,7 @@ const swiper = new Swiper('.swiper', {
     slideChange: () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
       changePage();
+      offShare();
     },
   },
 });
@@ -50,8 +51,9 @@ productTabs.forEach((tab, i) => {
 
 const headerBtns = document.querySelectorAll('.catalog-header__btn');
 const allPageToggleBtn = headerBtns[0];
-const allPage = document.querySelector('.slides-pagination');
 const allPageToggleBtnSvg = allPageToggleBtn.querySelectorAll('svg');
+const allPage = document.querySelector('.slides-pagination');
+const pages = allPage.querySelectorAll('.page');
 
 const toggleAllPage = () => {
   allPageToggleBtnSvg[0].classList.toggle('hidden');
@@ -62,8 +64,6 @@ const toggleAllPage = () => {
 allPageToggleBtn.addEventListener('click', () => {
   toggleAllPage();
 });
-
-const pages = allPage.querySelectorAll('.page');
 
 pages.forEach((page, i) => {
   page.addEventListener('click', () => {
@@ -80,3 +80,32 @@ const changePage = () => {
 };
 
 const shareToggleBtn = headerBtns[1];
+const shareToggleBtnSvg = shareToggleBtn.querySelectorAll('svg');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+const menuItems = dropdownMenu.querySelectorAll('.menu-item');
+
+const toggleShare = () => {
+  shareToggleBtnSvg[0].classList.toggle('hidden');
+  shareToggleBtnSvg[1].classList.toggle('hidden');
+  dropdownMenu.classList.toggle('hidden');
+};
+
+const offShare = () => {
+  shareToggleBtnSvg[0].classList.remove('hidden');
+  shareToggleBtnSvg[1].classList.add('hidden');
+  dropdownMenu.classList.add('hidden');
+};
+
+shareToggleBtn.addEventListener('click', () => {
+  toggleShare();
+});
+
+menuItems[1].addEventListener('click', () => {
+  navigator.clipboard.writeText(
+    'https://kingturtle0.github.io/newjwsup-catalog/',
+  );
+  menuItems[1].classList.add('active');
+  setTimeout(() => {
+    menuItems[1].classList.remove('active');
+  }, 1500);
+});

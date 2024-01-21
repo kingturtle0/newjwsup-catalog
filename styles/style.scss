@@ -1,7 +1,7 @@
 @import './reset.scss';
 @import './product.scss';
 @import './gear.scss';
-@import './pages.scss';
+@import './header.scss';
 
 a {
   text-decoration: none;
@@ -19,6 +19,7 @@ body {
 }
 
 .catalog {
+  min-width: 280px;
   max-width: 576px;
   width: 100%;
   background-color: white;
