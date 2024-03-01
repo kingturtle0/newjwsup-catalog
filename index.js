@@ -21,7 +21,6 @@ const swiper = new Swiper('.swiper', {
     slideChange: () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
       changePage();
-      offShare();
     },
   },
 });
@@ -79,33 +78,22 @@ const changePage = () => {
   currentPageIndex = swiper.activeIndex;
 };
 
-const shareToggleBtn = headerBtns[1];
-const shareToggleBtnSvg = shareToggleBtn.querySelectorAll('svg');
-const dropdownMenu = document.querySelector('.dropdown-menu');
-const menuItems = dropdownMenu.querySelectorAll('.menu-item');
+const copyLinkBtn = headerBtns[1];
+const copyLinkBtnSvg = copyLinkBtn.querySelectorAll('svg');
 
-const toggleShare = () => {
-  shareToggleBtnSvg[0].classList.toggle('hidden');
-  shareToggleBtnSvg[1].classList.toggle('hidden');
-  dropdownMenu.classList.toggle('hidden');
+const toggleCopy = () => {
+  copyLinkBtnSvg[0].classList.toggle('hidden');
+  copyLinkBtnSvg[1].classList.toggle('hidden');
 };
 
-const offShare = () => {
-  shareToggleBtnSvg[0].classList.remove('hidden');
-  shareToggleBtnSvg[1].classList.add('hidden');
-  dropdownMenu.classList.add('hidden');
-};
-
-shareToggleBtn.addEventListener('click', () => {
-  toggleShare();
-});
-
-menuItems[1].addEventListener('click', () => {
+copyLinkBtn.addEventListener('click', () => {
   navigator.clipboard.writeText(
     'https://kingturtle0.github.io/newjwsup-catalog/',
   );
-  menuItems[1].classList.add('active');
+  copyLinkBtn.classList.add('active');
+  toggleCopy();
   setTimeout(() => {
-    menuItems[1].classList.remove('active');
+    copyLinkBtn.classList.remove('active');
+    toggleCopy();
   }, 1500);
 });
