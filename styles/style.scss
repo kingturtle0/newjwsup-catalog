@@ -52,6 +52,35 @@ body {
     align-items: center;
     cursor: pointer;
     font-size: 14px;
+    &:nth-child(3) {
+      &::before {
+        content: '복사 완료!';
+        position: absolute;
+        bottom: -25px;
+        right: 0px;
+        background-color: $gearColor;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 14px;
+        display: none;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        right: 37.5px;
+        width: 10px;
+        height: 10px;
+        background-color: $gearColor;
+        transform: rotate(45deg);
+        display: none;
+      }
+      &.active::before,
+      &.active::after {
+        display: block;
+      }
+    }
   }
   .swiper-pagination {
     bottom: 0;
