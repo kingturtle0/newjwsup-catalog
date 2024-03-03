@@ -82,6 +82,7 @@ const copyLinkBtn = headerBtns[1];
 const copyLinkBtnSvg = copyLinkBtn.querySelectorAll('svg');
 
 const toggleCopy = () => {
+  copyLinkBtn.classList.toggle('active');
   copyLinkBtnSvg[0].classList.toggle('hidden');
   copyLinkBtnSvg[1].classList.toggle('hidden');
 };
@@ -90,10 +91,8 @@ copyLinkBtn.addEventListener('click', () => {
   navigator.clipboard.writeText(
     'https://kingturtle0.github.io/newjwsup-catalog/',
   );
-  copyLinkBtn.classList.add('active');
   toggleCopy();
   setTimeout(() => {
-    copyLinkBtn.classList.remove('active');
     toggleCopy();
   }, 1500);
 });
