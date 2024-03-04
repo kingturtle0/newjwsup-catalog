@@ -213,3 +213,24 @@ body {
     display: none !important;
   }
 }
+
+/* Custom, iPhone Retina : 320px ~ */
+@media only screen and (min-width: 320px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Extra Small Devices, Phones : 480px ~ */
+@media only screen and (min-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Small Devices, Tablets : 768px ~ */
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
