@@ -3,6 +3,10 @@
 @import './gear.scss';
 @import './header.scss';
 
+:root {
+  font-size: 0.9em;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -51,7 +55,6 @@ body {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    font-size: 14px;
     &:nth-child(3) {
       &::before {
         content: '복사 완료!';
@@ -214,23 +217,8 @@ body {
   }
 }
 
-/* Custom, iPhone Retina : 320px ~ */
-@media only screen and (min-width: 320px) {
-  body {
-    font-size: 14px;
-  }
-}
-
-/* Extra Small Devices, Phones : 480px ~ */
-@media only screen and (min-width: 480px) {
-  body {
-    font-size: 16px;
-  }
-}
-
-/* Small Devices, Tablets : 768px ~ */
-@media only screen and (min-width: 768px) {
-  body {
-    font-size: 18px;
+@media (max-width: 360px) {
+  :root {
+    font-size: 0.8em;
   }
 }
